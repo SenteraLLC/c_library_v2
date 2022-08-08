@@ -140,8 +140,8 @@ typedef enum MAV_SYS_STATUS_SENSOR
    MAV_SYS_STATUS_PREARM_CHECK=268435456, /* 0x10000000 pre-arm check status. Always healthy when armed | */
    MAV_SYS_STATUS_OBSTACLE_AVOIDANCE=536870912, /* 0x20000000 Avoidance/collision prevention | */
    MAV_SYS_STATUS_SENSOR_PROPULSION=1073741824, /* 0x40000000 propulsion (actuator, esc, motor or propellor) | */
-   MAV_SYS_STATUS_EXTENSION_USED=2147483648, /* 0x80000000 Extended bit-field are used for further sensor status bits (needs to be set in onboard_control_sensors_present only) | */
-   MAV_SYS_STATUS_SENSOR_ENUM_END=2147483649, /*  | */
+   MAV_SYS_STATUS_EXTENSION_USED=0x80000000, /* 0x80000000 Extended bit-field are used for further sensor status bits (needs to be set in onboard_control_sensors_present only) | */
+   MAV_SYS_STATUS_SENSOR_ENUM_END=0x80000001, /*  | */
 } MAV_SYS_STATUS_SENSOR;
 #endif
 
@@ -2583,8 +2583,8 @@ typedef enum HIL_SENSOR_UPDATED_FLAGS
    HIL_SENSOR_UPDATED_DIFF_PRESSURE=1024, /* The value in the diff_pressure field has been updated | */
    HIL_SENSOR_UPDATED_PRESSURE_ALT=2048, /* The value in the pressure_alt field has been updated | */
    HIL_SENSOR_UPDATED_TEMPERATURE=4096, /* The value in the temperature field has been updated | */
-   HIL_SENSOR_UPDATED_RESET=2147483648, /* Full reset of attitude/position/velocities/etc was performed in sim (Bit 31). | */
-   HIL_SENSOR_UPDATED_FLAGS_ENUM_END=2147483649, /*  | */
+   HIL_SENSOR_UPDATED_RESET=0x80000000, /* Full reset of attitude/position/velocities/etc was performed in sim (Bit 31). | */
+   HIL_SENSOR_UPDATED_FLAGS_ENUM_END=0x80000001, /*  | */
 } HIL_SENSOR_UPDATED_FLAGS;
 #endif
 
