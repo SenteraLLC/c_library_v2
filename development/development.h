@@ -195,7 +195,7 @@ typedef enum MAV_BATTERY_STATUS_FLAGS
           If unset the capacity_consumed indicates the consumption since vehicle power-on, as measured using a power monitor. The capacity_remaining, if provided, indicates the estimated remaining capacity on the assumption that the battery was full on vehicle boot.
           If unset a GCS is recommended to advise that users fully charge the battery on power on.
          | */
-   MAV_BATTERY_STATUS_FLAGS_EXTENDED=4294967295, /* Reserved (not used). If set, this will indicate that an additional status field exists for higher status values. | */
+   MAV_BATTERY_STATUS_FLAGS_EXTENDED=0xFFFFFFFF, /* Reserved (not used). If set, this will indicate that an additional status field exists for higher status values. | */
    MAV_BATTERY_STATUS_FLAGS_ENUM_END=4294967296, /*  | */
 } MAV_BATTERY_STATUS_FLAGS;
 #endif
